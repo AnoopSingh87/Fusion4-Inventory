@@ -1,0 +1,125 @@
+/* Footer.css */
+
+/* Background Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.footer {
+  /* background: linear-gradient(45deg, #044969, #7d8686, #0856a0); */
+  background-color:#424242;
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 1rem;
+}
+
+.footer-heading {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #f39c12;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-list a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, padding-left 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-list a:hover {
+  color: #f39c12;
+  padding-left: 0.5rem; /* Slide effect */
+}
+
+.subscription-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subscription-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.subscription-form button {
+  padding: 0.5rem 1rem;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscription-form button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.footer-social {
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  color: #fff;
+  margin: 0 0.75rem;
+  font-size: 1.75rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+  color: #f39c12;
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
+}

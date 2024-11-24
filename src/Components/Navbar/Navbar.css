@@ -1,0 +1,203 @@
+/* General Styles */
+.custom-navbar {
+  background-color: #65739b;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.brand-text {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.navbar-logo {
+  font-size: 1rem;
+}
+
+.navbar-brand:hover {
+  color: #f0c040;
+}
+
+/* Hamburger Menu */
+.custom-toggler {
+  border: none; /* Remove border */
+  background-color: transparent; /* Ensure no background color */
+  padding: 0;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  outline: none; /* Remove any outline on focus */
+}
+
+.custom-toggler:focus {
+  box-shadow: none; /* Remove focus box-shadow */
+  outline: none;
+}
+
+/* Hamburger Icon Lines */
+.navbar-toggler-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: #fff; /* White color for the lines */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.line1 {
+  transform-origin: top left;
+}
+
+.line3 {
+  transform-origin: bottom left;
+}
+
+/* When toggled, hamburger changes to 'X' */
+.toggled .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggled .line2 {
+  opacity: 0;
+}
+
+.toggled .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Nav Link Animations */
+.nav-links .nav-item-link {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links .nav-item-link:hover {
+  color: #f0c040;
+  transform: scale(1.1);
+}
+
+/* Icons Animation */
+.animated-icon {
+  margin-right: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animated-icon:hover {
+  transform: rotate(-10deg) scale(1.2);
+  color: #f0c040;
+}
+
+/* Account Dropdown */
+.account-dropdown .dropdown-menu {
+  background-color: #2a3956;
+  border-radius: 10px;
+  padding: 10px 0;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.account-dropdown.show .dropdown-menu {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown alignment */
+.account-dropdown.left .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+.account-dropdown.right .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.account-dropdown .dropdown-item {
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.account-dropdown .dropdown-item:hover {
+  background-color: #f0c040;
+  color: #1f2a48;
+}
+
+.account-dropdown .dropdown-icon {
+  margin-right: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 10px 0;
+  }
+
+  .nav-item-link {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  /* For mobile screens, dropdown opens full-width */
+  .account-dropdown.left .dropdown-menu,
+  .account-dropdown.right .dropdown-menu {
+    left: 0;
+    right: 0;
+    top: 50px;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .account-dropdown.show .dropdown-menu {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Hamburger Icon Animation */
+.custom-toggler .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff; /* Ensure white color */
+  transition: all 0.3s ease;
+}
+
+.custom-toggler.toggled .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.custom-toggler.toggled .line2 {
+  opacity: 0;
+}
+
+.custom-toggler.toggled .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}

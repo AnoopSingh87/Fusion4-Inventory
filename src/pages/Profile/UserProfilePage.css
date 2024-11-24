@@ -1,0 +1,158 @@
+/* UserProfilePage.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .user-profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .user-profile-header {
+    padding: 30px;
+    background-color: #4bc0c0;
+    color: #fff;
+    position: relative;
+  }
+  
+  .user-profile-avatar img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+  }
+  
+  .user-profile-header h1 {
+    font-size: 26px;
+    margin: 0;
+  }
+  
+  .user-profile-bio {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #e0e0e0;
+  }
+  
+  .edit-profile-btn {
+    margin-top: 20px;
+    background-color: #ff6384;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #e55472;
+  }
+  
+  .user-profile-details {
+    padding: 20px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  
+  .detail-icon {
+    margin-right: 10px;
+    color: #4bc0c0;
+    font-size: 20px;
+  }
+  
+  .user-profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .stat-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .stat-icon {
+    font-size: 30px;
+    color: #4bc0c0;
+    margin-bottom: 10px;
+  }
+  
+  .stat-item h3 {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .stat-item p {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .activity-date {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .user-profile-container {
+      margin: 20px;
+    }
+  
+    .user-profile-header h1 {
+      font-size: 22px;
+    }
+  
+    .user-profile-bio {
+      font-size: 14px;
+    }
+  
+    .edit-profile-btn {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  
+    .detail-item {
+      font-size: 14px;
+    }
+  
+    .user-profile-stats {
+      flex-direction: column;
+    }
+  
+    .stat-item {
+      margin-bottom: 20px;
+    }
+  }
+  

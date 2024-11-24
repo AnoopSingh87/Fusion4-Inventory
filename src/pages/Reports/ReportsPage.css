@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.reports-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.reports-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.reports-form label {
+  font-size: 1.2rem;
+  color: #555;
+  margin-right: 10px;
+}
+
+.reports-form select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.reports-form select:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Invoice Section */
+.invoice-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.7s ease-in-out;
+}
+
+.invoice-item h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.invoice-item p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.invoice-item strong {
+  color: #007bff;
+}
+
+/* Buttons */
+.invoice-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.invoice-actions button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.invoice-actions button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.invoice-actions button:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reports-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reports-form label {
+    margin-bottom: 10px;
+  }
+
+  .invoice-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .invoice-actions {
+    flex-direction: column;
+  }
+
+  .invoice-actions button {
+    margin-bottom: 10px;
+  }
+}

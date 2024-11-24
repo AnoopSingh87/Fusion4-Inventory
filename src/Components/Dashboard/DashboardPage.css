@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa; /* Light background for general area */
+  margin: 0;
+  padding: 0;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  padding: 20px;
+  background-color: #83bca9; /* Soft green background for the dashboard */
+  min-height: 100vh; /* Ensure the dashboard covers the full height of the viewport */
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #ffffff; /* White background for header to stand out */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for header */
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0; /* Remove default margin */
+}
+
+/* Cards */
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.card {
+  flex: 1 1 22%;
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for cards */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  /* Added min-height for consistency in card size */
+  min-height: 150px;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1.5rem; /* Slightly smaller font size for better readability */
+  font-weight: 700;
+  color: #333;
+}
+
+.card-icon {
+  font-size: 2rem; /* Adjusted size for better balance */
+  color: #4BC0C0; /* Example icon color */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dashboard-cards .card {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes chartGrow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.chart-container {
+  animation: chartGrow 0.8s ease-in-out;
+}
+
+/* Charts */
+.dashboard-charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.chart-section {
+  flex: 1 1 48%;
+  background-color: #ffffff; /* White background for chart sections */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for sections */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-section:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.chart-section h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+.chart-container canvas {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-cards, .dashboard-charts {
+    flex-direction: column;
+  }
+
+  .card, .chart-section {
+    flex: 1 1 100%;
+  }
+}
+
+/* Colors */
+.card-total-products .card-icon {
+  color: #FF6384; /* Card icon color */
+}
+
+.card-total-stock .card-icon {
+  color: #FFCE56; /* Card icon color */
+}
+
+.card-total-stock-value .card-icon {
+  color: #36A2EB; /* Card icon color */
+}
+
+.card-total-suppliers .card-icon {
+  color: #9966FF; /* Card icon color */
+}

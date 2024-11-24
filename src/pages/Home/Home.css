@@ -1,0 +1,680 @@
+/* General Styling */
+html,body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x:hidden;
+}
+
+.home-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.animated-gradient-overlay {
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 4rem; /* Large font size */
+  font-family: 'Bebas Neue', sans-serif; /* Special font for title */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  color: transparent; /* Make text transparent */
+  background-image: linear-gradient(90deg, #e6a900, #fcb03e); /* Gradient text */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* Safari/Chrome for gradient text */
+  display: inline-block; /* Required for animation */
+  text-align: center; /* Center align text */
+  animation: fadeIn 1.5s ease-in-out, slideIn 1.5s ease-in-out; /* Add animations */
+  text-shadow: 2px 4px 10px rgba(0, 115, 230, 0.5); /* Text shadow for depth */
+  letter-spacing: 3px; /* Add letter spacing */
+  margin-bottom: 20px; /* Margin below title */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframes for slide-in effect */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-30px); /* Slide from top */
+  }
+  100% {
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feature-list li svg {
+  margin-right: 10px;
+  color: #f0c040;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button {
+  background-color: #f0c040;
+  color: #fff;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #f0c040;
+}
+
+.cta-button:hover {
+  background-color: #e0b030;
+}
+
+/* Image Content */
+.image-content {
+  flex: 1;
+  text-align: center; /* Centers image */
+}
+
+.hero-gif {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center; /* Centers the text content */
+  }
+
+  .text-content {
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .image-content {
+    margin-top: 20px;
+  }
+
+  .hero-gif {
+    max-width: 80%; /* Shrinks the image to fit smaller screens */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .feature-list li {
+    font-size: 0.9rem;
+  }
+
+  .cta-buttons {
+    gap: 10px;
+  }
+
+  .cta-button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .hero-gif {
+    max-width: 90%; /* Ensures the GIF fits nicely on smaller screens */
+  }
+}
+
+
+/* About Section */
+.about-section {
+  background-color: #e0d3ee; /* Background color */
+  padding: 60px 20px; /* Padding around the section */
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center align content */
+  text-align: center; /* Center text */
+}
+
+.about-section .content-wrapper {
+  display: flex; /* Flexbox for image and text */
+  align-items: center; /* Align items vertically */
+  max-width: 1200px; /* Max width for large screens */
+  width: 100%; /* Full width */
+  gap: 40px; /* Space between image and text */
+  margin: auto; /* Center the content wrapper */
+}
+
+.about-section .image-content {
+  flex: 1; /* Flex grow for image */
+}
+
+.about-section .about-image {
+  max-width: 100%; /* Responsive image */
+  
+}
+.about-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  mix-blend-mode:normal; /* Blends the video with the background color */
+}
+
+.about-section .text-content {
+  flex: 1; /* Flex grow for text */
+  color: #333; /* Text color */
+  margin-left: 40px; /* Space between image and text */
+}
+
+.about-section .section-title {
+  font-size: 2.5rem; /* Larger title font size */
+  margin-bottom: 20px; /* Space below title */
+  color: #004d40; /* Darker teal color for title */
+  font-family: 'Poppins', sans-serif; /* Attractive font */
+  text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.about-section .section-description {
+  font-size: 1.1rem; /* Description font size */
+  margin-bottom: 20px; /* Space below description */
+  color: #555; /* Medium gray color for description */
+  line-height: 1.6; /* Improve readability with line height */
+}
+
+.about-section .about-features {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.about-section .about-features li {
+  display: flex; /* Flexbox for feature alignment */
+  align-items: center; /* Center icons and text vertically */
+  margin-bottom: 10px; /* Space between features */
+  font-family: 'Roboto', sans-serif; /* Secondary font for features */
+  font-size: 1rem; /* Feature font size */
+  color: #333; /* Feature text color */
+}
+
+.about-section .about-features li svg {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1.5rem; /* Larger icon size */
+  color: #ff9800; /* Icon color (orange) */
+  transition: transform 0.3s ease; /* Smooth transition for hover */
+}
+
+.about-section .about-features li:hover svg {
+  transform: scale(1.1); /* Scale up icon on hover */
+}
+
+
+/* What We Do Section */
+.what-we-do-section {
+  background-color: #F5EFFF;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.what-we-do-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.what-we-do-section .features-wrapper {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.what-we-do-section .feature-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  width: 30%;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.what-we-do-section .feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.what-we-do-section .feature-icon {
+  font-size: 3rem;
+  color: #f0c040;
+  margin-bottom: 20px;
+}
+
+.what-we-do-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.what-we-do-section p {
+  font-size: 1rem;
+}
+
+/* Updated Testimonials Section */
+.testimonials-section {
+  background-color: #F5EFFF;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px; /* Space between the title and the cards */
+  text-align: center;
+  color: #333;
+  font-weight: bold; /* Makes the title stand out */
+  letter-spacing: 1px; /* Adds a bit of spacing between letters */
+}
+
+/* Wrapper for the testimonial cards */
+.testimonial-wrapper {
+  display: flex;
+  justify-content: center; /* Ensures content is centered */
+  flex-wrap: wrap; /* Prevents cards from wrapping */
+  gap: 20px; /* Adds space between cards */
+  overflow: hidden; /* Enables horizontal scrolling if necessary */
+  padding-bottom: 20px; /* Adds spacing below the cards */
+}
+
+.testimonial-card {
+  perspective: 2000px;
+  width: 450px; /* Fixed width to keep cards consistent */
+  flex: 0 0 auto; /* Prevents shrinking */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Other styling for the cards and flip effect remains the same */
+.testimonial-card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.testimonial-card:hover .testimonial-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces of the card */
+.testimonial-card-front,
+.testimonial-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.testimonial-card-front {
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card-front h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonial-card-front cite {
+  font-size: 1rem;
+  color: #777;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+
+.testimonial-card-front p {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+}
+
+.testimonial-card-back {
+  background-color: #333;
+  color: #fff;
+  transform: rotateY(180deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-card-back h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #f0c040;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  color: #fff; /* Icon changes color on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    flex-wrap: wrap; /* On mobile, allow wrapping */
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    width: 90%; /* Make cards take more space on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section .section-title {
+    font-size: 2rem; /* Adjust the size of the title for smaller screens */
+  }
+
+  .testimonial-card-front h3,
+  .testimonial-card-back h3 {
+    font-size: 1.2rem;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Contact Section */
+/* Contact Section */
+/* General Styles for Contact Section */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #CDC1FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif; /* Stylish font for the whole section */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Subtitle or description */
+.section-subtitle {
+  font-size: 1.3rem;
+  color: #777;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Contact Wrapper - Responsive */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+@media (min-width: 768px) {
+  .contact-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Contact Info Section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.contact-method a {
+  color: #0073e6;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+  color: #005bb5;
+}
+
+.contact-icon {
+  font-size: 1.8rem;
+  color: #0073e6;
+  transition: color 0.3s ease;
+}
+
+.contact-method:hover .contact-icon {
+  color: #005bb5;
+}
+
+/* Contact Form Section */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Groups Styling */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  background: #fafafa;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0073e6;
+  box-shadow: 0 4px 10px rgba(0, 115, 230, 0.2);
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 180px;
+  resize: none;
+}
+
+/* Form Button Styling */
+.contact-form button {
+  padding: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 115, 230, 0.4);
+}
+
+/* Map Styling */
+.location-map {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .location-map {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .about-section .section-title,
+  .what-we-do-section .section-title,
+  .testimonials-section .section-title,
+  .contact-section .section-title {
+    font-size: 2rem;
+  }
+
+  .about-section .section-description {
+    font-size: 1rem;
+  }
+}
